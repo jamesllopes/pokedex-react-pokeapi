@@ -23,6 +23,7 @@
 .nav-list {
     display: flex;
     list-style: none;
+    cursor: pointer;
 }
 
 .item__list:hover{
@@ -31,4 +32,28 @@
 
 .item__list:not(:last-child) {    
 margin-right: 1em;
+}
+
+
+@media screen and (min-width: 1360px) {
+    .header {
+        height: 10vh;
+    }
+
+    .box__header {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo--pokemon {
+        width: 180px;
+    }
+
+    .item__list {
+        font-size: 1.6rem;
+    }
+    
+    
 }
