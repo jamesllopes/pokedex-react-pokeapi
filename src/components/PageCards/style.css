@@ -1,0 +1,28 @@
+.main-cards{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.pokemons {
+    justify-content: space-between;
+    width: 1144px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-icon {
+    padding: 0 30px;
+    cursor: pointer;
+}
+.hidden {
+    padding: 0 30px;
+    filter: invert(80%);
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+.header {
+    font-family: 'Karla', sans-serif;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: center;    
+    box-shadow:5px 5px 15px 1px rgba(0, 0, 0, 0.151) ; 
+}
+
+.box {
+    display: flex;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {    
+    display: flex;
+    list-style: none;
+}
+
+.list:not(:last-child) {
+    margin-right: 110px; 
+}
+
+.list {
+    padding-bottom: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.active {
+   
+    font-weight: 800;
+    border-bottom: 2px solid #000;
+}
