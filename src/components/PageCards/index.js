@@ -42,33 +42,35 @@ export default function PageCards() {
 
     return (
         <>
-            <Header
-                page={'Pokemon'} />
-            <main className='main-cards'>
+            <Header />
+            <main className='main__cards'>
                 <FilterPokemon
                     pokemons={pokemons}
                     setPokemons={setPokemons}
                     setpagination={setpagination}
                 />
-                <div className="page-pokemon">
-                    <img
-                        className={pagination === 0 ? 'hidden' : 'page-icon prev'}
-                        src={prev}
-                        alt='prev'
-                        onClick={() => paginationPrev()} />
-                    <div className='pokemons'>
+                <section className="container__pokemon">
+                    <div className='pokemons--cards'>
                         {pokemons.map(pokemon =>
                             <CardsPokemon
                                 key={pokemon.id}
                                 pokemon={pokemon}
                             />)}
                     </div>
-                    <img
-                        className={pokemons.length < 18 ? 'hidden' : 'page-icon next'}
-                        src={next}
-                        alt='next'
-                        onClick={() => paginationNext()} />
-                </div>
+                    <div className="pagination__icons">
+                        <img
+                            className={pagination === 0 ? 'hidden' : 'page-icon prev'}
+                            src={prev}
+                            alt='prev'
+                            onClick={() => paginationPrev()} />
+                        <img
+                            className={pokemons.length < 18 ? 'hidden' : 'page-icon next'}
+                            src={next}
+                            alt='next'
+                            onClick={() => paginationNext()} />
+
+                    </div>
+                </section>
             </main>
         </>
     )

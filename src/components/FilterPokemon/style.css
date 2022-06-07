@@ -1,43 +1,52 @@
-.title-div {
-    padding: 70px 0;
-    width: 100%;
+.container__filter {  
+    padding: 1.6em 0.8em; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.title-main {
-    font-family: 'Inter', sans-serif;
+.filter__title {
+    font-family: var(--font-inter);
     font-weight: 400;
-    font-size: 35px;
-    letter-spacing: 3px;
-    padding-bottom: 30px;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
 }
 
-.input {    
+.input__search {    
     display: flex;
     align-items: center;
 }
 
-.searchPokemon {
+.search__pokemon {
     position: relative;
     all: unset;
-    border: 1px solid rgba(204, 204, 204, 0.397);
-    box-shadow:5px 5px 15px 1px rgba(0, 0, 0, 0.151) ; 
-    padding: 0px 25px;
-    border-radius: 26px;
-    width: 1070px;
-    height: 50px;
+    border: 1px solid var(--gray-opacity);
+    box-shadow: var(--shadow); 
+    padding: 0.4em 4.6em;
+    border-radius: 1.6em;
+    margin: 1.6em 0;
 }
 
-.searchPokemon::placeholder {
-    font-family: 'Open Sans', sans-serif;
+.search__pokemon::placeholder {
+    text-align: center;
+    font-family: var(--font-open-sans);
     font-weight: 400;
-    color: #212121CC;
+    color: var(--gray-black-opacity);
 }
 
 .lupa {
     position: relative;
-    right: 40px;
-}
+    right: 2.2em;
+} 
+/* 
+
+
+
+
+
+
+
+
+*/
