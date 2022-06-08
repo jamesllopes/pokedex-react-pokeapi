@@ -6,7 +6,7 @@
     </div>
 
 ## :point_right: Acesse o Projeto
-https://pokedex-react-pokeapi-g5uqsz2yz-jamesllopes.vercel.app/
+https://pokedex-jamesllopes.vercel.app/
 
 
 ## :dart: Sobre o Projeto
