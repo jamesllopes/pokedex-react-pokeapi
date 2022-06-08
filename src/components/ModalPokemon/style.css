@@ -291,3 +291,36 @@ align-items: center;
         top: 0;
     }
 }
+
+@media screen and (min-width: 1600px) {
+
+    .box__modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        height: 55%;     
+    }
+
+    .container__modal {
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;      
+    }
+
+    .info__card {        
+        padding: 2.4em 1.4em;
+        background-color:var(--white);
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 0;
+    }
+
+    .container__image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .imagem__pokemon {
+        width: 70%;
+        position: relative;
+        top: 0;
+    }
+}
