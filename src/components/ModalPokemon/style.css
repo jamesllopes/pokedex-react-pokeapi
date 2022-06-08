@@ -223,14 +223,15 @@ align-items: center;
         display: flex;
         justify-content: center;
         align-items: center;   
-        height: 55%;     
+        height: 65%;     
     }
 
     .container__modal {
+        display: flex;
+        flex-direction: column;
         height: 100%;
         border-bottom-left-radius: 30px;
-        border-top-left-radius: 30px;
-       
+        border-top-left-radius: 30px;       
     }
 
     .icons__nav {
@@ -249,6 +250,7 @@ align-items: center;
     .container__image {
         display: flex;
         justify-content: center;
+        
     }
     
     .imagem__pokemon {
@@ -261,7 +263,7 @@ align-items: center;
         height: 10%;
         display: flex;
         flex-direction: column;
-        padding: 1.6em 0;
+        padding: 1em 0;
     }
 }
 
@@ -271,8 +273,8 @@ align-items: center;
         border-top-left-radius: 30px;      
     }
 
-    .info__card {
-        padding: 2.4em 1.4em;
+    .info__card {        
+        padding: 0 1.4em;
         background-color:var(--white);
         border-bottom-right-radius: 30px;
         border-top-left-radius: 0;
