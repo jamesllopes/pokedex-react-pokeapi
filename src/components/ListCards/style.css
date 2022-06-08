@@ -8,6 +8,7 @@
      border-radius: 10px;
      padding: 0.6em;
      position: relative;
+     cursor: pointer;
  }
 
  .pokemon__id {
@@ -49,6 +50,6 @@
 
 .pokemon__img {
     position: absolute;
-    width: 50%;
-    left: 5.8em;
+    width: 40%;
+    left: 6.4em;
 }
