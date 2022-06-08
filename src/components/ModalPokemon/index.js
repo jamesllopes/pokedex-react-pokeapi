@@ -5,7 +5,7 @@ import peso from '../../assets/peso.svg'
 import altura from '../../assets/altura.svg'
 import close from '../../assets/close.svg'
 
-export default function ModalPokemon({ pokemon, setOpen }) {
+export default function ModalPokemon({ pokemon, setOpen, infoPokemon }) {
     const types = pokemon.types
     const stats = pokemon.stats
     const ability = pokemon.abilities[0].ability.name
@@ -16,24 +16,24 @@ export default function ModalPokemon({ pokemon, setOpen }) {
 
     return (
         <>
-            <main className='main__modal'>
+            <main className={pokemon.name === infoPokemon.name && `main__modal ${infoPokemon.color}`} >
                 <div className='btn__close'>
                     <img className='btn--close' src={close} alt='Close'
                         onClick={() => handleCloseModal()} />
                 </div>
                 <div className='box__modal'>
-                    <section className='container__modal'>
+                    <section className={pokemon.name === infoPokemon.name && `container__modal ${infoPokemon.color}`}>
                         <div className='icons__nav'>
                             <img className='icon--back' src={prev} onClick={() => handleCloseModal()} alt='Button Back' />
-                            <img className='icon--fav' src={heart} alr='Favorite' />
+                            <img className='icon--fav' src={heart} alt='Favorite' />
                         </div>
-                        <div className='info__pokemon--modal'>
+                        <div className='info__pokemon--modal' >
                             <div className='info__name__id'>
                                 <h2 className='pokemon__name'>{pokemon.name[0].toUpperCase() + pokemon.name.substr(1)}</h2>
                                 <span className='pokemon__id'>{pokemon.id.toString().padStart(4, '#00')}</span>
                             </div>
-                            <div className='types__pokemon'>
-                                <p className='type'>{types[0].type.name[0].toUpperCase() + types[0].type.name.substr(1)}</p>
+                            <div className={pokemon.name === infoPokemon.name && `types__pokemon ${infoPokemon.color}`}>
+                                <p className='type' >{types[0].type.name[0].toUpperCase() + types[0].type.name.substr(1)}</p>
                                 <p className={types.length === 2 ? 'type' : ''}>{types.length === 2 ? types[1].type.name[0].toUpperCase() + types[1].type.name.substr(1) : ''}</p>
                             </div>
                         </div>
@@ -46,7 +46,6 @@ export default function ModalPokemon({ pokemon, setOpen }) {
                     <section className='info__card'>
                         <section className='description__card'>
                             <h2 className='title__description'>Descrição</h2>
-                            <p className='text__description'>Bulbasaur pode ser visto cochilando sob a luz do sol. Há uma semente nas costas. Ao absorver os raios do sol, a semente cresce progressivamente maior.</p>
                         </section>
                         <section className='info__data'>
                             <div className='box__peso'>
@@ -72,7 +71,8 @@ export default function ModalPokemon({ pokemon, setOpen }) {
                             <h2 className='feature__title'>Suas Caracteristicas</h2>
 
                             {stats.map(stat =>
-                            (<div className='stats'>
+                            (<div className='stats'
+                                key={stat.stat.name}>
                                 <p className='stats__title'>{stat.stat.name[0].toUpperCase() + stat.stat.name.substr(1)}
                                 </p>
                                 <div className='stats__value__container'>

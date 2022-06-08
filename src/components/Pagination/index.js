@@ -3,7 +3,6 @@ import next from '../../assets/next.svg'
 import './style.css'
 
 export default function Pagination({ pokemons, pagination, setpagination }) {
-
     const paginationNext = () => {
         if (pokemons.length < 18) return
         setpagination(pagination + 18)
@@ -26,7 +25,6 @@ export default function Pagination({ pokemons, pagination, setpagination }) {
                 src={next}
                 alt='next'
                 onClick={() => paginationNext()} />
-
         </div>
     )
 

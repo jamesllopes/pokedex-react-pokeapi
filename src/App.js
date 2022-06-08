@@ -1,14 +1,10 @@
 import './App.css';
-import InitialPage from './components/InitialPage';
-import ModalPokemon from './components/ModalPokemon';
-import PageCards from './components/PageCards';
+import Routing from './components/Routes/routes';
 
 function App() {
   return (
     <div className="container">
-      {/* <InitialPage /> */}
-      <PageCards />
-      {/* <ModalPokemon /> */}
+      <Routing />
     </div>
   );
 }

@@ -4,12 +4,10 @@ import CardsPokemon from '../ListCards';
 import FilterPokemon from "../FilterPokemon";
 import Pagination from "../Pagination";
 import './style.css'
-
-
 export default function PageCards() {
     const [pokemons, setPokemons] = useState([])
     const [pagination, setpagination] = useState(0)
-    const [color, setColor] = useState([])
+
 
     const fetchPokemon = async (getPokemons) => {
         const localPokemons = []
@@ -20,24 +18,6 @@ export default function PageCards() {
         }
         setPokemons(localPokemons)
     }
-
-    // useEffect(() => {
-    //     let dataColor = []
-    //     const colorData = []
-    //     const getColores = async () => {
-    //         const response = await fetch(`https://pokeapi.co/api/v2/pokemon-color/`)
-    //         const data = await response.json()
-    //         dataColor.push(data.results)
-    //         for (let color of dataColor[0]) {
-    //             let responseColor = await fetch(color.url)
-    //             let dataColors = await responseColor.json()
-    //             colorData.push(dataColors)
-    //         }
-    //         setColor(colorData)
-    //         console.log(colorData)
-    //     }
-    //     getColores()
-    // }, []);
 
     useEffect(() => {
         const callAPI = async () => {
@@ -56,6 +36,7 @@ export default function PageCards() {
                     pokemons={pokemons}
                     setPokemons={setPokemons}
                     setpagination={setpagination}
+                    fetchPokemon={fetchPokemon}
                 />
                 <section className="container__pokemon">
                     <div className='pokemons--cards'
@@ -65,7 +46,7 @@ export default function PageCards() {
                                 key={pokemon.id}
                                 pokemon={pokemon}
                                 id={pokemon.id}
-                            // color={color}
+                                pagination={pagination}
                             />)}
                     </div>
                     <Pagination
@@ -73,8 +54,6 @@ export default function PageCards() {
                         pagination={pagination}
                         setpagination={setpagination} />
                 </section>
-
-
             </main>
         </>
     )

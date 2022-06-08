@@ -1,7 +1,7 @@
 import lupa from '../../assets/lupa.svg'
 import './style.css'
 
-export default function FilterPokemon({ setPokemons, setpagination }) {
+export default function FilterPokemon({ setPokemons }) {
 
     const handlefilterPokemon = async (e) => {
         const pokemonFilter = []
@@ -10,7 +10,6 @@ export default function FilterPokemon({ setPokemons, setpagination }) {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`)
         const data = await response.json()
         pokemonFilter.push(data)
-        setpagination(0)
         setPokemons(pokemonFilter)
         e.target.value = ''
     }

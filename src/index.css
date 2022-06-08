@@ -3,16 +3,26 @@
 :root {
 --font-inter: 'Inter', sans-serif;
 --font-open-sans: 'Open Sans', sans-serif;
---green: #48D0B0;
---green-opacity: #48d0b0bd;
 --gray-opacity: #cfc6c665;
 --gray-black-opacity: #212121CC;
 --shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.151); 
---white: #fff;
 --black: #000;
 --back-soft: #171414;
 --gray-blue: #303943;
+--black-modal: rgba(0, 0, 0, 0.74);
+
+--white: #fff;
+--white-bg: #c5c5c5;
+--black-bg: #000;
+--green: #48D0B0;
+--green-opacity: #48d0b0bd;
 --red: #FB6C6C;
+--brown: #644f47 ;
+--blue: #4676A4;
+--pink: #f7adad;
+--gray:#424242;
+--purple: #46C5D7;
+--yellow: #FFCE4B;
 
 
 }

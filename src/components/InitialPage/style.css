@@ -42,6 +42,9 @@
     font-size: 1.1rem;
     font-weight: 700;
 }
+.btn__link {
+    all: unset;
+}
 
 .btn:hover{
     background: var(--green-opacity);

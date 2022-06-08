@@ -1,5 +1,5 @@
 .pokemon__cards {
-    border: 2px solid rgb(124, 95, 95);
+    color: var(--white);
      width: 11em;
      height: 7em;
      margin: 0.2em;
@@ -42,7 +42,6 @@
     font-family: var(--font-inter);
     font-weight: 600;
     padding: 0.16em;
-    background-color: bisque; 
     margin-top: 0.3em;
     border-radius: 25px;
     text-align: center;

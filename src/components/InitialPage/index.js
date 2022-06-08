@@ -1,8 +1,10 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Header from '../Header'
 import './style.css'
 
 export default function InitialPage() {
-
     return (
         <>
             <Header />
@@ -13,7 +15,7 @@ export default function InitialPage() {
                         você escolheria?
                     </h1>
                     <p className='subtitle__content'>Você pode saber o tipo de Pokémon, seus pontos fortes, fracos e habilidades.</p>
-                    <button className='btn'>Veja os Pokemons</button>
+                    <button className='btn'> <Link to="/pokemon" className='btn__link'>Veja os Pokemons</Link></button>
                 </div>
             </main>
         </>

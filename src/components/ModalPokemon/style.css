@@ -1,9 +1,12 @@
-.main__modal {
-    position: absolute;
+.main__modal {      
     z-index: 999;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--green);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
     font-family: var(--font-inter);
 }
 
@@ -60,7 +63,7 @@
     border-radius: 1em;
     padding: 0.2em 1em;
     margin: 0.8em 1em 0 0;
-    background-color: rgb(109, 228, 188)
+    
 }
 .container__image {
     display: flex;
@@ -78,19 +81,16 @@
     background-color:var(--white);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    height: 100vh;
 }
 
 .title__description {
     color: VAR(--green);
     font-size: 1.6rem;
     font-weight: 700;
+    padding: 1em 0 2em;
 }
 
-.text__description {
-font-size: 0.8rem;
-line-height: 1.4rem;
-padding: 2em 0;
-}
 
 .info__data {
     display: flex;
@@ -206,9 +206,7 @@ align-items: center;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.226);  
-        max-width: 100vw;
-        max-height: 100%;
+        background-color: var(--black-modal);  
     }
 
     .btn__close {
@@ -218,6 +216,7 @@ align-items: center;
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
+        filter: invert(100%);
     }
 
     .box__modal {
@@ -231,11 +230,15 @@ align-items: center;
         height: 100%;
         border-bottom-left-radius: 30px;
         border-top-left-radius: 30px;
-        background: var(--green);        
+       
+    }
+
+    .icons__nav {
+        display: none;
     }
 
     .info__card {
-        width: 45%;
+        width: 55%;
         height: 100%;
         padding: 2.4em 1.4em;
         background-color:var(--white);
@@ -265,12 +268,10 @@ align-items: center;
 @media screen and (min-width: 1360px) {
     .container__modal {
         border-bottom-left-radius: 30px;
-        border-top-left-radius: 30px;
-        background: var(--green);
+        border-top-left-radius: 30px;      
     }
 
     .info__card {
-        width: 40%;
         padding: 2.4em 1.4em;
         background-color:var(--white);
         border-bottom-right-radius: 30px;
