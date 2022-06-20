@@ -16,13 +16,13 @@ export default function ModalPokemon({ pokemon, setOpen, infoPokemon }) {
 
     return (
         <>
-            <main className={pokemon.name === infoPokemon.name && `main__modal ${infoPokemon.color}`} >
+            <main className={`main__modal ${infoPokemon.color}`} >
                 <div className='btn__close'>
                     <img className='btn--close' src={close} alt='Close'
                         onClick={() => handleCloseModal()} />
                 </div>
                 <div className='box__modal'>
-                    <section className={pokemon.name === infoPokemon.name && `container__modal ${infoPokemon.color}`}>
+                    <section className={`container__modal ${infoPokemon.color}`}>
                         <div className='icons__nav'>
                             <img className='icon--back' src={prev} onClick={() => handleCloseModal()} alt='Button Back' />
                             <img className='icon--fav' src={heart} alt='Favorite' />
@@ -32,7 +32,7 @@ export default function ModalPokemon({ pokemon, setOpen, infoPokemon }) {
                                 <h2 className='pokemon__name'>{pokemon.name[0].toUpperCase() + pokemon.name.substr(1)}</h2>
                                 <span className='pokemon__id'>{pokemon.id.toString().padStart(4, '#00')}</span>
                             </div>
-                            <div className={pokemon.name === infoPokemon.name && `types__pokemon ${infoPokemon.color}`}>
+                            <div className={`types__pokemon ${infoPokemon.color}`}>
                                 <p className='type' >{types[0].type.name[0].toUpperCase() + types[0].type.name.substr(1)}</p>
                                 <p className={types.length === 2 ? 'type' : ''}>{types.length === 2 ? types[1].type.name[0].toUpperCase() + types[1].type.name.substr(1) : ''}</p>
                             </div>

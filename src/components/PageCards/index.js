@@ -8,7 +8,6 @@ export default function PageCards() {
     const [pokemons, setPokemons] = useState([])
     const [pagination, setpagination] = useState(0)
 
-
     const fetchPokemon = async (getPokemons) => {
         const localPokemons = []
         for (let pokemon of getPokemons) {
@@ -39,15 +38,13 @@ export default function PageCards() {
                     fetchPokemon={fetchPokemon}
                 />
                 <section className="container__pokemon">
-                    <div className='pokemons--cards'
-                    >
+                    <div className='pokemons--cards'>
                         {pokemons.map(pokemon =>
                             <CardsPokemon
                                 key={pokemon.id}
                                 pokemon={pokemon}
                                 id={pokemon.id}
-                                pagination={pagination}
-                            />)}
+                                pagination={pagination} />)}
                     </div>
                     <Pagination
                         pokemons={pokemons}
