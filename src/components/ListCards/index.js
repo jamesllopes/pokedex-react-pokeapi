@@ -17,7 +17,7 @@ export default function CardsPokemon({ pokemon }) {
             })
         }
         getColores()
-    });
+    }, []);
 
     const handleOpenModal = () => {
         setOpen(true)

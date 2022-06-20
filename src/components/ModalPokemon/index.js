@@ -34,15 +34,13 @@ export default function ModalPokemon({ pokemon, setOpen, infoPokemon }) {
                             </div>
                             <div className={`types__pokemon ${infoPokemon.color}`}>
                                 <p className='type' >{types[0].type.name[0].toUpperCase() + types[0].type.name.substr(1)}</p>
-                                <p className={types.length === 2 ? 'type' : ''}>{types.length === 2 ? types[1].type.name[0].toUpperCase() + types[1].type.name.substr(1) : ''}</p>
+                                <p className={types.length === 2 ? 'type' : undefined}>{types.length === 2 ? types[1].type.name[0].toUpperCase() + types[1].type.name.substr(1) : ''}</p>
                             </div>
                         </div>
                         <picture className='container__image'>
                             <img className='imagem__pokemon' src={pokemon.sprites.other.home.front_default} alt='Pokemon' />
-
                         </picture>
                     </section>
-
                     <section className='info__card'>
                         <section className='description__card'>
                             <h2 className='title__description'>Descrição</h2>
@@ -69,7 +67,6 @@ export default function ModalPokemon({ pokemon, setOpen, infoPokemon }) {
                         </section>
                         <section className='container__feature'>
                             <h2 className='feature__title'>Suas Caracteristicas</h2>
-
                             {stats.map(stat =>
                             (<div className='stats'
                                 key={stat.stat.name}>
