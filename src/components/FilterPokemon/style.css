@@ -87,21 +87,4 @@
     .input__search {    
        width: 95%;
     }
-
-    .search__pokemon {
-        width: 90%;
-        padding: 1em 1.6em;
-    }
-    
-    .search__pokemon::placeholder {
-        text-align: start;
-        font-family: var(--font-open-sans);
-        font-weight: 400;
-        color: var(--gray-black-opacity);
-    }
-
-    .lupa {
-        right: 2.8em;
-    } 
-
 }
