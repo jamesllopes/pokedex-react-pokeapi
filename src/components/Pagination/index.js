@@ -1,8 +1,10 @@
 import prev from '../../assets/prev.svg'
 import next from '../../assets/next.svg'
+import usePoke from '../../hooks/usePoke'
 import './style.css'
 
-export default function Pagination({ pokemons, pagination, setpagination }) {
+export default function Pagination() {
+    const { pokemons, pagination, setpagination } = usePoke()
     const paginationNext = () => {
         if (pokemons.length < 18) return
         setpagination(pagination + 18)

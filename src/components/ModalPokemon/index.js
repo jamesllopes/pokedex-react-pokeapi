@@ -4,8 +4,10 @@ import heart from '../../assets/heart.svg'
 import peso from '../../assets/peso.svg'
 import altura from '../../assets/altura.svg'
 import close from '../../assets/close.svg'
+import usePoke from '../../hooks/usePoke'
 
-export default function ModalPokemon({ pokemon, setOpen, infoPokemon }) {
+export default function ModalPokemon({ pokemon, infoPokemon }) {
+    const { setOpen } = usePoke()
     const types = pokemon.types
     const stats = pokemon.stats
     const ability = pokemon.abilities[0].ability.name

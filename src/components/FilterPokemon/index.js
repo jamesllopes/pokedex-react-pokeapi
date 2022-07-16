@@ -1,7 +1,10 @@
 import lupa from '../../assets/lupa.svg'
+import usePoke from '../../hooks/usePoke'
 import './style.css'
 
-export default function FilterPokemon({ setPokemons }) {
+export default function FilterPokemon() {
+
+    const { setPokemons } = usePoke()
 
     const handlefilterPokemon = async (e) => {
         const pokemonFilter = []

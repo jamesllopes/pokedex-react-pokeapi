@@ -200,7 +200,7 @@ align-items: center;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: var(--black-modal);  
+        background-color: var(--black-modal);
     }
 
     .btn__close {

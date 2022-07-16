@@ -1,10 +1,11 @@
 import './style.css'
+import usePoke from '../../hooks/usePoke';
 import { useState, useEffect } from "react";
 import ModalPokemon from "../ModalPokemon";
 
 export default function CardsPokemon({ pokemon }) {
     const [infoPokemon, setInfoPokemon] = useState({})
-    const [open, setOpen] = useState(false)
+    const { open, setOpen } = usePoke()
     const types = pokemon.types
 
     useEffect(() => {
@@ -27,8 +28,8 @@ export default function CardsPokemon({ pokemon }) {
             {open && <ModalPokemon
                 key={pokemon.id}
                 pokemon={pokemon}
-                setOpen={setOpen}
-                infoPokemon={infoPokemon} />}
+                infoPokemon={infoPokemon}
+            />}
             <div
                 className={`pokemon__cards ${infoPokemon.color}`}
                 id={pokemon.name}
@@ -40,7 +41,7 @@ export default function CardsPokemon({ pokemon }) {
                     <div
                         className='pokemon--name--type'>
                         <h1 className='name--pokemon'>{pokemon.name[0].toUpperCase() + pokemon.name.substr(1)}</h1>
-                        <p className={`type--pokemon ${infoPokemon.color}`}>{types[0].type.name}</p>
+                        <p className={`type--pokemon ${infoPokemon.color}`}>{pokemon.types[0].type.name}</p>
                         <p className={types.length === 2 && 'type--pokemon'}>{types.length === 2 && types[1].type.name}</p>
                     </div>
                     <img

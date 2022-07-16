@@ -1,11 +1,12 @@
-import './App.css';
 import Routing from './Routes/routes';
+import { PokeProvider } from './context/pokeContext'
 
 function App() {
   return (
-    <div className="container">
+    <PokeProvider>
       <Routing />
-    </div>
+    </PokeProvider>
+
   );
 }
 

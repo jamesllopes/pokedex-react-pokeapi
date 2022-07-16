@@ -9,7 +9,7 @@
 --black: #000;
 --back-soft: #171414;
 --gray-blue: #303943;
---black-modal: rgba(0, 0, 0, 0.74);
+--black-modal: rgba(0, 0, 0, 0.493);
 
 --white: #fff;
 --white-bg: #c5c5c5;
@@ -38,5 +38,49 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.green-opacity {
+  background-color: var(--green);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.white {
+  background-color: var(--white-bg);
+}
+
+.black {
+  background-color: var(--black-bg);
+}
+
+.brown {
+  background-color: var(--brown);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.gray {
+  background-color: var(--gray);
+}
+
+.pink {
+  background-color: var(--pink);
+}
+
+.purple {
+  background-color: var(--purple);
 }
 
