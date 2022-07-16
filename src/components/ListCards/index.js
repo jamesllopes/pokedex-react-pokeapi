@@ -1,11 +1,10 @@
 import './style.css'
-import usePoke from '../../hooks/usePoke';
 import { useState, useEffect } from "react";
 import ModalPokemon from "../ModalPokemon";
 
 export default function CardsPokemon({ pokemon }) {
     const [infoPokemon, setInfoPokemon] = useState({})
-    const { open, setOpen } = usePoke()
+    const [open, setOpen] = useState(false)
     const types = pokemon.types
 
     useEffect(() => {
@@ -29,6 +28,8 @@ export default function CardsPokemon({ pokemon }) {
                 key={pokemon.id}
                 pokemon={pokemon}
                 infoPokemon={infoPokemon}
+                open={open}
+                setOpen={setOpen}
             />}
             <div
                 className={`pokemon__cards ${infoPokemon.color}`}
